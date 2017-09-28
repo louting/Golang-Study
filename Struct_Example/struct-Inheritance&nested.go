@@ -1,3 +1,5 @@
+// 结构的继承
+
 package main
 
 import (
@@ -28,6 +30,7 @@ func (t *Content2) Get2(a string) {
 
 func main() {
 
+	// 只要定义一个结构，其继承了被嵌套对象的所有方法。
 	type mystruct struct {
 		test1
 	}
