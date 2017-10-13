@@ -97,10 +97,12 @@ func (m *MessageSent) Sentdata(access_token, Url, messagebody string) {
 
 func main() {
 	params := os.Args[1:]
-	var Department string
-	var Contentbody string
-	var Agentid string
-	var Agentsecret string
+	var (
+		Department  string
+		Contentbody string
+		Agentid     string
+		Agentsecret string
+	)
 
 	if len(params) == 0 {
 		showUsage(os.Stdout)
@@ -173,4 +175,3 @@ func main() {
 
 	M.Sentdata(T, Url, string(messagebody))
 }
-
