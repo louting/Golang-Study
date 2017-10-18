@@ -133,10 +133,7 @@ func main() {
 	// ####参数检查设定完成
 
 	department, info := Getconfig()
-	fmt.Println(department)
-	fmt.Println(info)
 	for _, value := range department {
-		fmt.Println(value)
 		for k, v := range info {
 			if k == value {
 				M := MessageSent{
