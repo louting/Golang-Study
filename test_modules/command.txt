@@ -1,0 +1,2 @@
+<<[ `ssh -p 47033 -i /var/jenkins_home/.ssh/id_rsa lout@114.141.171.199 ssh ubuntu@192.168.1.31 df -h |grep SDB1 |awk '{print ($(NF-1))}'|sed 's/%//'` -lt 80 ]>> <<exit_status>> <<0>>
+<<'ssh -p 47033 -i /var/jenkins_home/.ssh/id_rsa lout@114.141.171.199 ssh ubuntu@192.168.1.106 ps -ef|grep lighting2017 |grep -v grep |wc -l'>> <<match>> <<2>> 
