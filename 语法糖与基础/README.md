@@ -36,3 +36,6 @@ golang的定义：空接口interface{} 就是范型，它可以接受一切数�
 Reference 1：http://www.ruanyifeng.com/blog/2011/09/restful.html
 
 Reference 2：https://www.zhihu.com/question/20590081/answer/56199325
+
+### 8.侵入式与非侵入
+以go语言为例，在程序编译时，编译器不会对数据定义的接口进行方法检查。这样，go的接口就是非侵入性的。由于编译器不会检查，就带来了一定的风险，可以通过 var _ Interface = data 这样的定义方式检查 data是否实现了interface所以包含的所有方法，避免程序运行异常。
