@@ -31,11 +31,14 @@ golang的定义：空接口interface{} 就是范型，它可以接受一切数�
 错误指的是可能出现问题的地方出现了问题，比如打开一个文件时失败，这种情况在人们的意料之中 ；而异常指的是不应该出现问题的地方出现了问题，比如引用了空指针，这种情况在人们的意料之外。可见，**错误是业务过程的一部分，而异常不是**。
 
 ### 7.Restful架构
-要理解RESTful架构，最好的方法就是去理解Representational State Transfer这个词组到底是什么意思，它的每一个词代表了什么涵义。
-
 Reference 1：http://www.ruanyifeng.com/blog/2011/09/restful.html
 
 Reference 2：https://www.zhihu.com/question/20590081/answer/56199325
+
+Reference 3: https://www.zhihu.com/question/27785028
+
+URL定位资源，用HTTP动词（GET,POST,DELETE,DETC）描述操作。
+或者说是基于http协议的一种资源定义和资源获取的方法论(个人乱说)。
 
 ### 8.侵入式与非侵入
 以go语言为例，在程序编译时，编译器不会对数据定义的接口进行方法检查。这样，go的接口就是非侵入性的。由于编译器不会检查，就带来了一定的风险，可以通过 var _ Interface = data 这样的定义方式检查 data是否实现了interface所以包含的所有方法，避免程序运行异常。
@@ -43,3 +46,4 @@ Reference 2：https://www.zhihu.com/question/20590081/answer/56199325
 ### 9.可取代性
 可以把一种类型，替换为满足同一接口的另一种类型的特性称为**可取代性**，这也是面对对象语言的典型特征。
   - [例子](exp1.md)
+
